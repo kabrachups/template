@@ -36,3 +36,8 @@ In the project you can find the next approaches and technics:
 - router navigation with children
 - css depending on screen resolution (ViewMain.vue)
 - axios with async await
+
+## Project structure
+I prefer to keep layouts in separate folders and call views as "views" (not "screens" etc.)
+Folders have subfolders, it makes future navigation easier when project grows. 
+Tests should be added in the future
