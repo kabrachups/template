@@ -1,4 +1,5 @@
 <template>
+<!--	basic quasar template-->
 	<q-layout view="hHh lpr lff">
 
 		<q-header class="bg-blue-grey-10 text-white">

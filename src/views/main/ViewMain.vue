@@ -32,6 +32,8 @@ import ViewMainCard from "./components/ViewMainCard.vue";
 const viewMainStore = useViewMainStore()
 
 onMounted(() => {
+    // page and done are arguments from q-infinite-scroll in-built component
+	// as there no done for the first call in this place it is undefined
     viewMainStore.getItems(0, undefined)
 })
 

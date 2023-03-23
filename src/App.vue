@@ -1,4 +1,5 @@
 <template>
+<!--	entry component-->
 	<RouterView/>
 </template>
 

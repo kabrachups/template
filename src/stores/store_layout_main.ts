@@ -1,10 +1,11 @@
 import { defineStore } from 'pinia'
 import {InterfaceLeftDrawerItem} from "../interfaces/layouts/main/interface_left_drawer_item";
 
-// You can name the return value of `defineStore()` anything you want,
-// but it's best to use the name of the store and surround it with `use`
-// and `Store` (e.g. `useUserStore`, `useCartStore`, `useProductStore`)
-// the first argument is a unique id of the store across your application
+/**
+ * State management for LayoutMain
+ * drawer state (to avoid a lot of props and emits
+ * drawer items as one place to store data
+ */
 export const useLayoutMainStore = defineStore('layout-main-store', {
     state: () => {
         return {
@@ -12,6 +13,7 @@ export const useLayoutMainStore = defineStore('layout-main-store', {
             leftDrawerOpen: true,
             leftDrawerItems: [
                 {path: '/main', icon: 'public', label: 'Main', caption: 'main task here'},
+            //     add new menu items here
             ] as InterfaceLeftDrawerItem[]
         }
     },
