@@ -32,7 +32,7 @@ import ViewMainCard from "./components/ViewMainCard.vue";
 const viewMainStore = useViewMainStore()
 
 onMounted(() => {
-    viewMainStore.getItems()
+    viewMainStore.getItems(0, undefined)
 })
 
 </script>
