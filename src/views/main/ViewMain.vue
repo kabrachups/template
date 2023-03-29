@@ -1,10 +1,17 @@
 <template>
 	<div class="row">
 		<div class="col-3 scroll container-height">
-			<q-infinite-scroll @load="viewMainStore.getItems" :offset="250">
+			<q-infinite-scroll
+				@load="viewMainStore.getItems"
+				:offset="250"
+			>
 				<template v-slot:loading>
 					<div class="row justify-center q-my-md">
-						<q-spinner color="primary" name="dots" size="40px" />
+						<q-spinner
+							color="primary"
+							name="dots"
+							size="40px"
+						/>
 					</div>
 				</template>
 				<ViewMainItem
@@ -34,6 +41,7 @@ const viewMainStore = useViewMainStore()
 onMounted(() => {
     // page and done are arguments from q-infinite-scroll in-built component
 	// as there no done for the first call in this place it is undefined
+	// this invocation is redundant with infinite scroll (just for demonstration onMounted)
     viewMainStore.getItems(0, undefined)
 })
 

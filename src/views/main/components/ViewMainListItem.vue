@@ -1,5 +1,9 @@
 <template>
-	<q-item clickable @click="$emit('increment')" v-ripple>
+	<q-item
+		clickable
+		@click="$emit('increment')"
+		v-ripple
+	>
 		<q-item-section avatar>
 			<q-avatar rounded>
 				<q-img :src="src" fit="cover"/>
@@ -13,7 +17,10 @@
 				{{ id }}
 			</q-item-label>
 		</q-item-section>
-		<q-item-section avatar class="xs-hide">
+		<q-item-section
+			avatar
+			class="xs-hide"
+		>
 			<div class="row">
 				<div class="col-6 q-pa-sm">
 					<q-icon name="ads_click"/>

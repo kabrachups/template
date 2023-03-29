@@ -3,11 +3,11 @@ class ModelMainItem {
      * Objects of this class are user to display and keep counter for items in list on items in ViewMain
      */
     key: number
-    id: number
-    author: string
-    imgLarge: string
-    imgSmall: string
-    counter: number
+    public id: number
+    public author: string
+    public imgLarge: string
+    public imgSmall: string
+    public counter: number
 
     constructor(id: number, author: string, imgLarge: string, imgSmall: string) {
         this.key = Math.random()

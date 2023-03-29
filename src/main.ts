@@ -19,7 +19,6 @@ import router from "./router/router";
 const app = createApp(App)
 
 // http
-axios.defaults.baseURL = 'https://api.pexels.com/v1/search?query=people'
 axios.defaults.baseURL = 'https://api.pexels.com/v1/'
 // TODO move it to env variable
 axios.defaults.headers.common.Authorization = 'xJn8XZme8j8VIkyVx92abi7CWBet80XGuwlr9F1avctRskZAw8bGn8y1'

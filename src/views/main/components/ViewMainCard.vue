@@ -1,6 +1,14 @@
 <template>
-	<q-card flat class="q-pa-md" >
-		<q-img v-if="viewMainStore.item" :src="viewMainStore.item.imgLarge" class="container-height" fit="cover">
+	<q-card
+		flat
+		class="q-pa-md"
+	>
+		<q-img
+			v-if="viewMainStore.item"
+			:src="viewMainStore.item.imgLarge"
+			class="container-height"
+			fit="cover"
+		>
 			<div class="absolute-bottom text-subtitle2 text-center">
 				{{ viewMainStore.item.author }} (clicks: {{viewMainStore.item.counter }} )
 			</div>

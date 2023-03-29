@@ -19,16 +19,24 @@ export const useViewMainStore = defineStore('view-main-store', {
     actions: {
         // page and done are arguments from q-infinite-scroll in-built component
         async getItems(page: number, done?: Function) {
+            alert()
             // default page is q-infinite-scroll is 0, so +1 is required
             this.page = page + 1
             const queryParams = new URLSearchParams();
             queryParams.append('query', 'people');
             queryParams.append('page', String(this.page));
             try {
-              const response = await axios.get(this.url, {params: queryParams})
+              const response = await axios.get(
+                  this.url,
+                  {params: queryParams}
+              )
               // TODO add additional validation for response
               for (const photo of response.data.photos) {
-                  const item = new ModelMainItem(photo.id, photo.photographer, photo.src.large, photo.src.small)
+                  const item = new ModelMainItem(
+                      photo.id, photo.photographer,
+                      photo.src.large,
+                      photo.src.small
+                  )
                   this.items.push(item)
               }
             } catch (e) {
