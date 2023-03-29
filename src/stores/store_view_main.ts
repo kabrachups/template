@@ -12,7 +12,7 @@ export const useViewMainStore = defineStore('view-main-store', {
             url: 'search',
             // items list is not plain objects, but objects of class to handle counters
             items: [] as ModelMainItem[],
-            item: null,
+            item: null as ModelMainItem | null,
             page: 1
         }
     },
