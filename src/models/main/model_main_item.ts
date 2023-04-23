@@ -1,6 +1,6 @@
 class ModelMainItem {
     /**
-     * Objects of this class are user to display and keep counter for items in list on items in ViewMain
+     * Objects of this class are used to display and keep counter for items in list on items in ViewMain
      */
     key: number
     public id: number
